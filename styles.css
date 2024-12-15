@@ -91,6 +91,14 @@ p {
     animation: textColorChange 7s infinite, glowText 2s infinite alternate; /* Glowing and color change animations */
 }
 
+/* Donation info styling */
+.donate-info {
+    font-size: 1.2rem;
+    color: #ff6347; /* Color for donation text */
+    animation: glowText 2s infinite alternate;
+    margin-top: 20px;
+}
+
 /* Buttons */
 button {
     background-color: black;
@@ -296,28 +304,11 @@ body {
     text-decoration: none;
     cursor: pointer;
 
-/* Floating clown images */
-.floating-clown {
-    position: absolute;
-    cursor: pointer;
-    animation: floatClown 10s infinite ease-in-out;
-}
-
-@keyframes floatClown {
-    0% {
-        transform: translateY(0) scale(0.5) rotate(0deg);
-    }
-    25% {
-        transform: translateY(-30%) scale(1) rotate(45deg);
-    }
-    50% {
-        transform: translateY(0) scale(1.2) rotate(90deg);
-    }
-    75% {
-        transform: translateY(30%) scale(0.8) rotate(135deg);
-    }
-    100% {
-        transform: translateY(0) scale(1) rotate(180deg);
-    }
+/* Floating donation info */
+.donate-info {
+    font-size: 1.2rem;
+    color: #ff6347; /* Glowing color for donation text */
+    animation: glowText 2s infinite alternate;
+    margin-top: 20px;
 }
 }
