@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Pookie Owners</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            background-color: black;
+            background-size: contain; /* Make sure the whole image is visible */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            background-position: center;
+            animation: slideshow 25s infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Define the background slideshow */
+        @keyframes slideshow {
+            0% { background-image: url('bryce2.png'); }
+            15% { background-image: url('oxry.png'); }
+            30% { background-image: url('realhaxer.png'); }
+            45% { background-image: url('5court.png'); }
+            60% { background-image: url('dane1.png'); }
+            75% { background-image: url('percs.png'); }
+            90% { background-image: url('bryce3.png'); }
+            85% { background-image: url('bryce2.png'); }
+            95% { background-image: url('realhaxer2.png'); }
+            100% { background-image: url('realhaxer3.png'); }
+        }
+
+        .container {
+            z-index: 1;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.3rem;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+            margin-right: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            background-color: #0a74da;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aether Pookie Owners</h1>
+        <ul>
+            <li>Landen419</li>
+            <li>Squid</li>
+            <li>5Court</li>
+            <li>Vqizp</li>
+            <li>Zquos</li>
+        </ul>
+        <button class="button" onclick="alert('Redirecting to buy Aether!')">Buy Aether</button>
+        <button class="button" onclick="alert('More features coming soon!')">More</button>
+    </div>
+</body>
+</html>
