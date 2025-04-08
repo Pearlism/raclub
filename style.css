@@ -1,0 +1,95 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #d4faff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1, h2 {
+  color: #66fcf1;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #66fcf1;
+  background-color: transparent;
+  color: #d4faff;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00adb5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #02cfd0;
+}
+
+#link a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #d4faff;
+}
+
+li a {
+  color: #a8f7ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #067e8f;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+li button:hover {
+  background: #0899a4;
+}
