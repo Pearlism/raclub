@@ -54,6 +54,15 @@ button:hover {
   background: #02cfd0;
 }
 
+#fileList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#fileList li {
+  margin-bottom: 5px;
+}
+
 #link a {
   color: #66fcf1;
   text-decoration: none;
