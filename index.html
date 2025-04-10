@@ -3,283 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload Service</title>
+    <title>LuckyWare Generator</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional styles specific to this page */
-        .upload-area {
-            border: 2px dashed #66fcf1;
-            padding: 40px 20px;
-            text-align: center;
-            margin: 30px 0;
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .upload-area:hover {
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
-        }
-        
-        .upload-area.highlight {
-            background: rgba(102, 252, 241, 0.1);
-            box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
-        }
-        
-        #file-input {
-            display: none;
-        }
-        
-        #link-display {
-            margin-top: 30px;
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .link-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        #file-link {
-            flex-grow: 1;
-            padding: 12px 15px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid #66fcf1;
-            border-radius: 8px;
-            color: #d4faff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        #copy-btn {
-            background: #00adb5;
-            white-space: nowrap;
-        }
-        
-        #copy-btn:hover {
-            background: #02cfd0;
-        }
-        
-        .file-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .file-icon {
-            font-size: 40px;
-            color: #66fcf1;
-        }
-        
-        .file-details {
-            text-align: left;
-        }
-        
-        .file-name {
-            font-weight: bold;
-            color: #66fcf1;
-            margin-bottom: 5px;
-            word-break: break-all;
-        }
-        
-        .file-size {
-            color: #a8f7ff;
-            font-size: 0.9em;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .upload-progress {
-            width: 100%;
-            height: 8px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
-            margin-top: 15px;
-            overflow: hidden;
-            display: none;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(to right, #00adb5, #02cfd0);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>File Upload Service</h1>
-        <p style="text-align: center; margin-bottom: 20px;">Upload your files and get a shareable link</p>
-        
-        <div class="upload-area" id="drop-area">
-            <svg class="file-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
-            <h3>Drag & Drop Files Here</h3>
-            <p>or</p>
-            <button id="upload-btn" onclick="document.getElementById('file-input').click()">Browse Files</button>
-            <input type="file" id="file-input">
-        </div>
-        
-        <div class="upload-progress" id="upload-progress">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        
-        <div id="link-display">
-            <div class="file-info" id="file-info">
-                <svg class="file-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <div class="file-details">
-                    <div class="file-name" id="file-name"></div>
-                    <div class="file-size" id="file-size"></div>
-                </div>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="https://media.discordapp.net/attachments/1359157408265535548/1359926162142531765/icon.png?ex=67f9416f&is=67f7efef&hm=38221105434ff6c79549343a96f0c0b0e8f50fbadd4fb648921939126f07841e&=&format=webp&quality=lossless&width=1109&height=887" alt="LuckyWare Logo" class="logo">
+                <h2 class="header-title">LuckyWare</h2>
             </div>
+            <a href="https://discord.gg/luckywareofficial" target="_blank" class="discord-icon">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h1 class="title">Account Generator</h1>
             
-            <p>Your file is ready to share:</p>
-            <div class="link-container">
-                <input type="text" id="file-link" readonly>
-                <button id="copy-btn">Copy Link</button>
+            <div class="generator-box">
+                <div class="accounts-counter" id="accountsCounter">
+                    Loading accounts...
+                </div>
+                <div class="result-container">
+                    <div class="result-box" id="resultBox">
+                        Click Generate to get a account
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard()" title="Copy to clipboard">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                    <div class="copy-success" id="copySuccess">Copied!</div>
+                </div>
+                
+                <div class="buttons">
+                    <button class="generate-btn" onclick="generateAccount()">
+                        <span>Generate</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        const dropArea = document.getElementById('drop-area');
-        const fileInput = document.getElementById('file-input');
-        const linkDisplay = document.getElementById('link-display');
-        const fileLink = document.getElementById('file-link');
-        const copyBtn = document.getElementById('copy-btn');
-        const fileName = document.getElementById('file-name');
-        const fileSize = document.getElementById('file-size');
-        const uploadProgress = document.getElementById('upload-progress');
-        const progressBar = document.getElementById('progress-bar');
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">©2025 LuckyWare. All rights reserved.</p>
+        </div>
+    </footer>
 
-        // Handle drag and drop events
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            dropArea.addEventListener(eventName, preventDefaults, false);
-            document.body.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
-        // Highlight drop area when item is dragged over it
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropArea.addEventListener(eventName, highlight, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropArea.addEventListener(eventName, unhighlight, false);
-        });
-
-        function highlight() {
-            dropArea.classList.add('highlight');
-        }
-
-        function unhighlight() {
-            dropArea.classList.remove('highlight');
-        }
-
-        // Handle dropped files
-        dropArea.addEventListener('drop', handleDrop, false);
-        fileInput.addEventListener('change', handleFiles, false);
-
-        function handleDrop(e) {
-            const dt = e.dataTransfer;
-            fileInput.files = dt.files;
-            handleFiles();
-        }
-
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-
-        async function handleFiles() {
-            const file = fileInput.files[0];
-            if (!file) return;
-
-            // Show file info
-            fileName.textContent = file.name;
-            fileSize.textContent = formatFileSize(file.size);
-            
-            // Show progress bar
-            uploadProgress.style.display = 'block';
-            progressBar.style.width = '0%';
-
-            const formData = new FormData();
-            formData.append('file', file);
-
-            try {
-                const xhr = new XMLHttpRequest();
-                
-                xhr.upload.onprogress = function(e) {
-                    if (e.lengthComputable) {
-                        const percentComplete = (e.loaded / e.total) * 100;
-                        progressBar.style.width = percentComplete + '%';
-                    }
-                };
-                
-                xhr.onload = function() {
-                    if (xhr.status === 200) {
-                        const data = JSON.parse(xhr.responseText);
-                        if (data.link) {
-                            fileLink.value = data.link;
-                            linkDisplay.style.display = 'block';
-                        } else {
-                            showError('Upload failed: ' + (data.error || 'Unknown error'));
-                        }
-                    } else {
-                        showError('Upload failed with status ' + xhr.status);
-                    }
-                };
-                
-                xhr.onerror = function() {
-                    showError('Upload failed. Please try again.');
-                };
-                
-                // Replace with your Replit backend URL
-                xhr.open('POST', 'https://landen1337.pearl2poor.repl.co/upload', true);
-                xhr.send(formData);
-            } catch (error) {
-                showError('Upload failed: ' + error.message);
-            }
-        }
-
-        function showError(message) {
-            alert(message);
-            progressBar.style.width = '0%';
-            uploadProgress.style.display = 'none';
-        }
-
-        copyBtn.addEventListener('click', () => {
-            fileLink.select();
-            document.execCommand('copy');
-            
-            // Visual feedback
-            const originalText = copyBtn.textContent;
-            copyBtn.textContent = 'Copied!';
-            copyBtn.style.background = '#02cfd0';
-            
-            setTimeout(() => {
-                copyBtn.textContent = originalText;
-                copyBtn.style.background = '#00adb5';
-            }, 2000);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
